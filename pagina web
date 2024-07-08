@@ -1,258 +1,560 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIQUEUR</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="estilo.css">
-</head>
-<body>
-    <!-- SECCION INICIO -->
-    <section id="inicio">
-        <header>
-            <div class="contenido-header">
-                <div class="logo">
-                    <h1>LA MEILLEURE LIQUEUR</h1>
-                </div>
-                <nav id="nav">
-                    <ul>
-                        <li>
-                            <a href="#inicio" onclick="seleccionar()">
-                                <i class="fa-solid fa-house"></i>
-                                <span>Inicio</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#ofertas" onclick="seleccionar()">
-                                <i class="fa-solid fa-offer"></i>
-                                <span>Ofertas</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#platos" onclick="seleccionar()">
-                                <i class="fa-solid fa-utensils"></i>
-                                <span>Platos</span>
-                            </a></li>
-                        <li>
-                            <a href="#blog" onclick="seleccionar()">
-                                <i class="fa-solid fa-pen"></i>
-                                <span>Blog</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contacto" onclick="seleccionar()">
-                                <i class="fa-solid fa-comments"></i>
-                                <span>Contacto</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                    <div class="social">
-                        <a href="https://www.facebook.com/profile.php?id=61561779465543" target="_blank" class="social-button facebook">Facebook</a>
-                        <a href="https://x.com/isa_petit32493?t=fIfuCRYl2J6woU1qCckF9w&s=09" target="_blank" class="social-button twitter">Twitter</a>
-                        <a href="https://www.instagram.com/liqueur_08?utm_source=qr&igsh=a3d3a2cwajN4YzEy" target="_blank" class="social-button instagram">Instagram</a>
-                    </div>
-                </div>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+html{
+    scroll-behavior: smooth;
+}
+/* ******* */
+/* SECCION I N I C I O */
+/* ******* */
+#inicio{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#inicio header{
+    width: 100%;
+}
+#inicio header .contenido-header{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
 
-                <div class="nav-responsive" id="bar" onclick="mostrarOcultarMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-            
-        </header>
-        <!-- Carrusel -->
-        <div class="carrusel">
-            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround":true, "pageDots": false, "autoPlay": true}'>
-                <div class="gallery-cell" >
-                    <img src="https://png.pngtree.com/background/20210715/original/pngtree-black-simple-red-wine-promotion-background-picture-image_1318779.jpg" alt="">
-                </div>
-                <div class="gallery-cell">
-                    <img src="https://st3.depositphotos.com/29384342/33851/i/450/depositphotos_338516426-stock-photo-decanter-whiskey-two-glasses-half.jpg" alt="">
-                </div>
-                <div class="gallery-cell">
-                    <img src="https://cdn-italiani-media.italiani.it/site-italiani/2018/05/miglioreliquore1.jpg" alt="">
-                </div>
-                <div class="gallery-cell">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Publicit%C3%A9_liqueur_%22La_Montbartine%22.jpg/782px-Publicit%C3%A9_liqueur_%22La_Montbartine%22.jpg" alt="">
-                </div>
-            </div>
-            <div class="info">
-                <h2>Contamos con los mejores licores añejos</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                <button>Leer Más</button>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- SECCION OFERTAS -->
-    <section id="ofertas">
-        <h2>Ofertas</h2>
-        <div class="fila">
-            
-        <!-- Offer 1: Whiskey Lovers -->
-<article class="offer">
-    <h2>Amantes del Whiskey</h2>
-    <p>Obtén 10% de descuento en todas las </p>
-    <p>botellas de whiskey</p>
-    <button class="btn-shop">COMPRA AHORA!</button>
-    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTnWsjg4qYOhX7hffAvkE2hzKRfttPmXN9E0QhWw7G5vqaRh4EHfc-wZhLkhu_RDdFJa4uViVxJprUGAjPW64TCvX_pkqgIH9gXCfeJDNo43ysYpTdgaQkszA&usqp=CAE" alt="Whiskey Bottle">
-    <div class="offer-details">
-      <p>Utiliza el codigó WHISKEY10 al finalizar la compra</p>
-      <p>Oferta valida hasta el 3 de agosto</p> 
-    </div>
-  </article>
-  
-  <!-- Offer 2: Vodka Special -->
-  <article class="offer">
-    <h2>Especial en Vodka</h2>
-    <p>Compra una botella de vodka y consigue </p>
-    <p>la otra con un 50% de descuento</p>
-    <button class="btn-shop">COMPRA AHORA!</button>
-    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSRSa8FmMG60-A-qomJbYmwPBPhm4tia_Fp9QEKJXQ37nGmsllW3YphAwnluZm6OCK6MO7fRA5jsqyTFKrVyvi9bru-4sotSi5XRN0gKMeQDC0zGfVu4cotDQ&usqp=CAE" alt="Vodka Bottle">
-    <div class="offer-details">
-      <p>Utiliza el codigó VODKA50 al finalizar la compra</p>
-      <p>Oferta valida hasta el 15 de agosto</p>
-    </div>
-  </article>
-  
-  <!-- OfERTA 3: Ron Diplomatico -->
-  <article class="offer">
-    <h2>Ron Diplomatico</h2>
-    <p>Obtén 20% de descuento en todas las</p> 
-    <p>botellas de Ron + envio gratis!!</p>    
-    <button class="btn-shop">COMPRA AHORA!</button>
-    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS4etMU6ITf9wBC6Rh7MMcdt_58LnhTEqh7DN8IEdPt_2M7IN5uDKPWLIdbG82-weg28E5rg6nt401HLrL1SyuH46f2nnt-gyfw51hIIAGa&usqp=CAE" alt="Rum Bottle">
-    <div class="offer-details">
-      <p>Utiliza el codigó RUM20 al finalizar la compra</p>
-      <p>Oferta válida hasta el 12 de julio!</p>
-    </div>
-  </article>
-  <script src="java.js"></script>
-
-    </section>
-
-    <!-- SECCION PLATOS -->
-    <section id="platos">
-        <h2>Platos</h2>
-
-        <div class="fila">
-            <div class="item">
-                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRiZRerSqa78GDg4uVLqnwUSKcQWkxLvsd3vQz-2ZP2G4MRARKkpp02kphqlUtzMljbUPylPyEBg3J1D934xSu5AZ8rh5vLBh42TbbPutc&usqp=CAE" alt="">
-                <p>La Tabla de Queso Gourmet Chica</p>
-            </div>
-            <div class="item">
-                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRirrfvc2YNj8-7Tr4So9Teebd6xGTvxfETObSxtLg9t53fC0QEx5edZT-m-3DojhxM7nYgOKpqEJQnrs6qKIyFMHeiK2bFMFdbUgT3xE8&usqp=CAE" alt="">
-                <p>La Tabla de Queso Gourmet Mediana</p>
-            </div>
-            <div class="item">
-                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS7F3zIN6KSmUp3jdUH_j6IwLBb_9TVQ6G3exUw_KEMgxu3VDvG2vwuV8qyHQTWW8hRih3ADOlGshx5s8avoWu37NFqQHx1KOBymrzl8Mk&usqp=CAE" alt="">
-                <p>La Tabla de Queso Gourmet Grande</p>
-            </div>
-        </div>
-        <div class="fila">
-            <div class="item">
-                <img src="https://carneyvinomipasion.com.mx/wp-content/uploads/2021/05/Tbone-y-Porterhouse-1024x782.jpeg" alt="">
-                <p>Corte T-Bone con Esparragos</p>
-            </div>
-            <div class="item">
-                <img src="https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2022/04/pizzas-masa-madre-cdmx-lardo-e1648919881579.jpg?fit=974%2C580&ssl=1" alt="">
-                <p>Pizza con Masa Madre</p>
-            </div>
-            <div class="item">
-                <img src="https://www.allrecipes.com/thmb/2bm5wahQoBpIc277in1ssEHtZYY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7568496_Air-Fryer-New-York-Strip-Steaks_Bibi_4x3-0ccda35b14864d9c959e14af64466659.jpg" alt="">
-                <p>Air Fryer New York Strip Steak</p>
-            </div>
-        </div>
-        <button>Ver Más</button>
-    </section>
-
+}
+#inicio header .contenido-header nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#inicio header .contenido-header nav ul{
+    display: flex;
+    list-style: none;
+}
+#inicio header .contenido-header .logo{
+    color: #580505;
+    font-size: 22px;
+}
+#inicio header .contenido-header nav ul li{
+    text-align: center;
+}
+#inicio header .contenido-header nav ul li i{
+    display: block;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+}
+#inicio header .contenido-header nav ul li a{
+    display: block;
+    text-decoration: none;
+    color:#a8a8a8;
+    margin: 0px 20px;
+}
+#inicio header .contenido-header nav ul li:hover i{
+    color: #580505;
+}
+#inicio header .contenido-header .social a{
+    display: inline-block;
+    background-color: #580505;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+#inicio header .contenido-header .social > i{
+    display: inline-block;
+    color: #a8a8a8;
+    margin-left: 10px;
+}
+.nav-responsive{
+   display: none;
+   font-size: 25px;
+   color: #a8a8a8;
+}
+/* Carrusel */
+#inicio .carrusel{
+    position: relative;
+    height: 100%;
+}
+#inicio .carrusel .info{
+    position: absolute;
     
-    <!-- SECCION BLOG -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <div class="galeria-blog js-flickity" data-flickity-options='{ "wrapAround":true, "pageDots": true}'>
-            <div class="gallery-cell" >
-                <div class="item">
-                    <div class="foto">
-                        <img src="img/cheff1.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        <h3>El arte de cocinar</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, repudiandae est maxime quam alias asperiores.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-cell" >
-                <div class="item">
-                    <div class="foto">
-                        <img src="img/cheff2.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        <h3>¿Donde estudiar cocina?</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, repudiandae est maxime quam alias asperiores culpa minus corporis neque hic sunt dolore.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-cell" >
-                <div class="item">
-                    <div class="foto">
-                        <img src="img/cheff3.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        <h3>La cocina del 2023</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, repudiandae est maxime quam alias asperiores culpa.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button>Leer Más</button>
-    </section>
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    text-align: center;
+    color:#fff;
+}
+#inicio .carrusel .info h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script';
+}
+#inicio .carrusel .info button{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #580505;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#inicio .gallery {
+    width: 100%;
+    height: 100%;
+}
+  
+#inicio .gallery-cell {
+    width: 100%;
+    margin-right: 10px;
+    height: 100%;
+}
+#inicio .gallery-cell img{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
 
-    <!-- SECCION CONTACTO Y PIE DE PAGINA -->
-    <section id="contacto">
-        <div class="fila">
-            <div class="col">
-                <h1>LA MEILLEURE LIQUEUR</h1>
-            </div>
-            <div class="col">
-                <h3>Menú</h3>
-                <a href="#inicio">Inicio</a>
-                <a href="#ofertas">Ofertas</a>
-                <a href="#ofertas">Platos</a>
-                <a href="#ofertas">Blog</a>
-            </div>
-            <div class="col">
-                <h3>Cheffs</h3>
-                <a href="#">Marcos G.</a>
-                <a href="#">María L.</a>
-                <a href="#">Marta J.</a>
-            </div>
-            <div class="col">
-                <h3>Social Media</h3>
-                <div class="media">
-                <a href="https://x.com/isa_petit32493?t=fIfuCRYl2J6woU1qCckF9w&s=09" target="_blank" class="social-button twitter">Twitter</a>
-                </div>
-                <div class="media">
-                <a href="https://www.instagram.com/liqueur_08?utm_source=qr&igsh=a3d3a2cwajN4YzEy" target="_blank" class="social-button instagram">Instagram</a>
-                </div>
-                <div class="media">
-                <a href="https://www.facebook.com/profile.php?id=61561779465543" target="_blank" class="social-button facebook">Facebook</a>
-                </div>
-            </div>
-            <div class="col">
-                <h3>Registro</h3>
-                <a href="registro.html">Registrarse</a>
 
-            </div>
-        </div>
+/* ******* */
+/* SECCION S A B O R E S */
+/* ******* */
+#ofertas{
+    padding: 50px 0;
+}
+#ofertas h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+#ofertas .fila{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+}
+#ofertas .fila .item img{
+    max-width: 150px;
+}
+#ofertas .fila .item{
+    display: flex;
+    align-items:center;
+    margin: 20px 10px;
+    padding: 5px;
+}
+#ofertas .fila .item:hover{
+    background-color:#580505
+}
+#ofertas .fila .item .info{
+    margin-left: 15px;
+    font-size: 14px;
+}
+#ofertas button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #580505;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
 
-    </section>
-    
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+/* ******* */
+/* SECCION P L A T O S */
+/* ******* */
+#platos h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#platos .fila{
+    max-width: 1100px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+}
+#platos .fila .item{
+    width: 33%;
+    position:relative;
+    overflow: hidden;
+}
+#platos .fila .item img{
+    width: 100%;
+    display: block;
+}
+#platos .fila .item p{
+    position:absolute;
+    width: 100%;
+    bottom: -100%;
+    padding: 10px;
+    background-color:#580505;
+    color: #fff;
+    transition: .5s;
+}
+#platos .fila .item:hover p{
+    bottom: 0;
+}
+#platos button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #580505;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+/* ******* */
+/* SECCION B L O G*/
+/* ******* */
+#blog{
+    padding: 50px 0;
+}
+#blog h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.galeria-blog{
+    max-width: 800px;
+    margin: 50px auto;
+}
+.galeria-blog .gallery-cell .item{
+    display: flex;
+    align-items: center;
+    margin: 0 80px;
+}
+.galeria-blog .gallery-cell img{
+    display: block;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #580505   ;
+    margin-right: 30px;
+}
+.galeria-blog .gallery-cell h3{
+    margin-bottom: 7px;
+}
+.galeria-blog .gallery-cell p{
+    color: #a8a8a8;
+    font-style: italic;
+}
+#blog button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #580505;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* ******* */
+/* SECCION C O N T A C TO */
+/* ******* */
+#contacto{
+    background-color: #580505;
+    padding: 50px 0;
+}
+#contacto .fila{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+#contacto a{
+    text-decoration: none;
+    color:#fff;
+    display: block;
+    margin-bottom: 3px;
+}
+#contacto a:hover{
+    text-decoration: underline;
+}
+#contacto h3{
+    margin-bottom: 12px;
+}
+#contacto .media{
+    display: flex;
+    align-items: center;
+}
+#contacto .media i{
+    display: block;
+    margin-right: 10px;
+}
+#contacto input{
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 30px;
+}
+#contacto .enviar{
+    background-color: #580505;
+    color: #fff;
+    width: fit-content;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* ******* */
+/* SECCION RESPONSIVE */
+/* ******* */
+
+@media screen and (max-width:1070px) {
+    #inicio header .contenido-header .social{
+        display: none;
+    }
+    #inicio header .contenido-header nav{
+        position: static;
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width:700px) {
+    #sabores .fila{
+        display: block;
+    }
+    #platos .fila{
+        display: block;
+        width: 100%;
+    }
+    #platos .fila .item{
+        width: 100%;
+    }
+    #inicio header .contenido-header nav{
+        position: initial;
+        display: none;
+        transform: translate(0);
+    }
+    .nav-responsive{
+        display: block;
+    }
+    #inicio header .contenido-header{
+        padding: 20px;
+    }
+    #inicio header .contenido-header nav.responsive{
+        display: block;
+        position:absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 100vh;
+        background-color: #252A2E;
+        z-index: 99;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+
+    #contacto .fila{
+        display: block;
+        text-align: center;
+    }
+    #contacto .fila h3{
+        margin: 20px 0 3px 0;
+    }
+    #contacto .fila .media{
+        display: block;
+    }
+    #contacto .fila input{
+        width: 90%;
+    }
+}
+
+/* ******* */
+/* SECCION ARTICLE */
+/* ******* */
+
+.offer {
+    background-color: #c95555;
+    padding: 20px;
+    border: 1px solid #5f1414;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000001a;
+    margin-bottom: 20px;
+  }
+  
+  .offer h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  .offer p {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .offer .btn-shop {
+    background-color: #333;
+    color: #7a1111;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .offer .btn-shop:hover {
+    background-color: #444;
+  }
+  
+  .offer img {
+    width: 150px;
+    height: 200px;
+    margin: 45px;
+    border-radius: 70%;
+  }
+  
+  .offer-details {
+    font-size: 16px;
+    color: #999;
+    margin-top: 10px;
+  }
+  
+  .offer-details p {
+    margin-bottom: 10px;
+  }
+
+  /* Offer 1: Whiskey Lovers */
+.offer.whiskey-lovers {
+    background-color: #f5f5dc;
+  }
+  
+  .offer.whiskey-lovers h2 {
+    color: #8b4513;
+  }
+  
+  .offer.whiskey-lovers .btn-shop {
+    background-color: #7a1111;
+  }
+  
+  /* Offer 2: Vodka Special */
+  .offer.vodka-special {
+    background-color: #cce5ff;
+  }
+  
+  .offer.vodka-special h2 {
+    color: #00698f;
+  }
+  
+  .offer.vodka-special .btn-shop {
+    background-color: #7a1111;
+  }
+  
+  /* Offer 3: Rum Bundle */
+  .offer.rum-bundle {
+    background-color: #ffd7be;
+  }
+  
+  .offer.rum-bundle h2 {
+    color: #8b4513;
+  }
+  
+  .offer.rum-bundle .btn-shop {
+    background-color: #7a1111;
+  }
+  .cart-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .cart-container h2 {
+    margin-top: 0;
+  }
+  
+  #cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #cart-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #cart-list li:last-child {
+    border-bottom: none;
+  }
+  
+  #cart-total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  #reserve-btn {
+    background-color: #7a1111;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #reserve-btn:hover {
+    background-color: #7a1111;
+  }
+  
+  .product-list {
+    margin-top: 20px;
+  }
+  
+  .product-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .product-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #7a1111;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #7a1111;
+  }
